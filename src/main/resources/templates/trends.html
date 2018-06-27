@@ -1,0 +1,20 @@
+<html>
+
+	<head>
+	
+		<title>Hello Twitter</title>
+	</head>
+	<body>
+		<h3>Hello, <span th:text="${twitterProfile.name}">Some User</span>!</h3>
+		
+		<h4>Trends of your location:</h4>
+		
+		<ul>
+		
+			<li th:each="trend:${trends}" th:text="${trend.name}">Trend</li>
+		</ul>
+		<script type="text/javascript">
+		setTimeout(location.reload.bind(location), 900000);
+		</script>
+	</body>
+</html>
